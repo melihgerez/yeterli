@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yeterli</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="gradient-bg"></div>
+
+    <div class="container">
+      <!-- Açılış Ekranı -->
+      <div id="screen-opening" class="screen">
+        <p class="opening-text"></p>
+      </div>
+
+      <!-- Soru 1 -->
+      <div id="screen-question1" class="screen hidden">
+        <p class="question-text">Şu an nasıl hissediyorsun?</p>
+        <div class="options options-compact">
+          <!-- 🔴 AĞIR / YÜK BAZLI (öncelik: dinlenmeli) -->
+          <button class="option-btn" data-value="yorgun" data-group="agir">
+            Yorgun
+          </button>
+          <button class="option-btn" data-value="bunalmis" data-group="agir">
+            Bunalmış
+          </button>
+          <button class="option-btn" data-value="huzursuz" data-group="agir">
+            Huzursuz
+          </button>
+          <button class="option-btn" data-value="bos" data-group="agir">
+            Boş
+          </button>
+          <button class="option-btn" data-value="isteksiz" data-group="agir">
+            İsteksiz
+          </button>
+          <!-- 🟡 ZİHİNSEL / KARARSIZ (öncelik: denge) -->
+          <button
+            class="option-btn"
+            data-value="kararsiz"
+            data-group="zihinsel"
+          >
+            Kararsız
+          </button>
+          <button
+            class="option-btn"
+            data-value="odaklanamiyorum"
+            data-group="zihinsel"
+          >
+            Odaklanamıyorum
+          </button>
+          <!-- 🟢 GERİLİM / BLOKE (öncelik: hareketli) -->
+          <button class="option-btn" data-value="sikiSmis" data-group="gerilim">
+            Sıkışmış
+          </button>
+          <button class="option-btn" data-value="gergin" data-group="gerilim">
+            Gergin
+          </button>
+          <!-- ⚪ NÖTR (özel durum) -->
+          <button class="option-btn" data-value="normal" data-group="notr">
+            Normal
+          </button>
+        </div>
+      </div>
+
+      <!-- İlk Öneri Ekranı -->
+      <div id="screen-suggestion1" class="screen hidden">
+        <div class="suggestion-container">
+          <span class="suggestion-line suggestion-text" id="line1-a"></span>
+          <span class="suggestion-line suggestion-text" id="line1-b"></span>
+          <span class="suggestion-line suggestion-text" id="line1-c"></span>
+        </div>
+        <div class="action-buttons">
+          <button class="continue-btn">devam</button>
+          <button class="skip-btn">kapat</button>
+        </div>
+      </div>
+
+      <!-- Soru 2 -->
+      <div id="screen-question2" class="screen hidden">
+        <p class="question-text">Şu anda seni zorlayan şey ne?</p>
+        <div class="options options-compact">
+          <button class="option-btn" data-value="zaman">Zaman</button>
+          <button class="option-btn" data-value="enerji">Enerji</button>
+          <button class="option-btn" data-value="odak">Odak</button>
+          <button class="option-btn" data-value="baski">Baskı</button>
+          <button class="option-btn" data-value="kararsizlik">
+            Kararsızlık
+          </button>
+          <button class="option-btn" data-value="bilmiyorum">Bilmiyorum</button>
+        </div>
+      </div>
+
+      <!-- Son Öneri Ekranı -->
+      <div id="screen-suggestion" class="screen hidden">
+        <div class="suggestion-container">
+          <span class="suggestion-line suggestion-text" id="line-baglam"></span>
+          <span class="suggestion-line suggestion-text" id="line-eylem"></span>
+          <span
+            class="suggestion-line suggestion-text"
+            id="line-kapanis"
+          ></span>
+        </div>
+        <p class="closing-text">Bu yeterli.</p>
+        <button class="close-btn">Kapat</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
